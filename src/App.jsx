@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Header from "./Header";
 import Content from "./Content";
+import Footer from "./Footer";
 const App = () => {
   const [mode, setMode] = useState(true);
   function changeMode(value) {
@@ -10,6 +11,7 @@ const App = () => {
     <div className={`card ${mode === "dark" ? "dark" : ""}`}>
       <Header changeMode={changeMode} />
       <Content />
+      <Footer />
     </div>
   );
 };
