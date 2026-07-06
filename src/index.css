@@ -1,0 +1,130 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --primary-bg-color: white;
+  --secondary-bg-color: white;
+  --tertary-bg-color: rgba(75, 64, 242);
+  --primary-text-color: black;
+  --secondary-text-color: grey;
+  --tertary-text-color: white;
+  --primary-danger-color: red;
+  --primary-border-color: #334155;
+}
+.dark {
+  --primary-bg-color: #111827;
+  --secondary-bg-color: #1e293b;
+  --tertary-bg-color: rgba(75, 64, 242);
+  --primary-text-color: white;
+  --secondary-text-color: grey;
+  --tertary-text-color: white;
+  --primary-danger-color: red;
+}
+body {
+  min-height: 100vh;
+  width: 100%;
+  background-color: #f5f7fa;
+}
+#root {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+.card {
+  width: 500px;
+  background-color: var(--primary-bg-color);
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+.header {
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--primary-border-color);
+}
+.left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.left p {
+  color: var(--primary-text-color);
+}
+.right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.task {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border: 1px solid var(--primary-border-color);
+  border-radius: 8px;
+  background-color: var(--secondary-bg-color);
+}
+.task > label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--primary-text-color);
+}
+
+.content {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+}
+.taskList {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.searchbar {
+  display: flex;
+  gap: 10px;
+}
+.searchbar > input {
+  padding: 8px;
+  flex-grow: 1;
+}
+.searchbar > button {
+  padding: 8px;
+  background-color: var(--tertary-bg-color);
+  border-radius: 12px;
+  cursor: pointer;
+  border: none;
+  color: white;
+}
+.left > button {
+  cursor: pointer;
+
+  padding: 8px;
+  border: 1px solid grey;
+  border-radius: 12px;
+  background-color: white;
+  color: grey;
+}
+.active {
+  background-color: var(--tertary-bg-color);
+}
+.right > button {
+  border-radius: 50%;
+  padding: 5px;
+  border: none;
+}
+.task > button {
+  background-color: transparent;
+  border: none;
+}
+.underline {
+  text-decoration: line-through;
+}
+button.active {
+  background-color: rgba(75, 64, 242);
+  color: white;
+  border: none;
+}
