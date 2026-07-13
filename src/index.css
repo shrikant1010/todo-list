@@ -1,3 +1,4 @@
+@import "tailwindcss";
 * {
   margin: 0;
   padding: 0;
@@ -31,6 +32,11 @@ body {
   display: flex;
   justify-content: center;
   margin-top: 30px;
+}
+.taskAdder {
+  border: 1px solid var(--primary-text-color);
+  background-color: white;
+  color: black;
 }
 .card {
   width: 500px;

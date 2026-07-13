@@ -8,7 +8,7 @@ const App = () => {
   }
   return (
     <div className={`card ${mode === "dark" ? "dark" : ""}`}>
-      <Header changeMode={changeMode} />
+      <Header changeMode={changeMode} mode={mode} />
       <Content />
     </div>
   );

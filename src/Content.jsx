@@ -35,10 +35,18 @@ const Content = () => {
       }),
     );
   }
+  let allTaskCount = allTasks.length;
+  let pendingTaskCount = allTasks.filter(
+    (item) => item.checked === false,
+  ).length;
+  let completeTaskCount = allTasks.filter(
+    (item) => item.checked === true,
+  ).length;
   return (
     <div className="content">
       <label className="searchbar">
         <input
+          className="taskAdder border border-black"
           type="text"
           placeholder="what do you want to do?"
           onChange={(e) => setTaskVal(e.target.value)}
@@ -47,7 +55,7 @@ const Content = () => {
           Add task
         </button>
       </label>
-      <div>
+      <div className="flex justify-between">
         <div className="left">
           <button
             onClick={() => setCurrentState("All")}
@@ -68,7 +76,13 @@ const Content = () => {
             Completed
           </button>
         </div>
-        <div className="right">{}</div>
+        <div className="right">
+          {currentState === "All"
+            ? `Task Count : ${allTaskCount}`
+            : currentState === "pending"
+              ? `Task Count ${pendingTaskCount}`
+              : `Task Count ${completeTaskCount}`}
+        </div>
       </div>
       <div className="taskList">
         {currentState === "All"
