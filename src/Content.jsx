@@ -50,6 +50,11 @@ const Content = () => {
           type="text"
           placeholder="what do you want to do?"
           onChange={(e) => setTaskVal(e.target.value)}
+          onKeyDown={(e) => {
+            if (e.key === "Enter") {
+              handleAddTask();
+            }
+          }}
         />
         <button onClick={handleAddTask} className="active">
           Add task
